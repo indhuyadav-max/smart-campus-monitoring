@@ -2,32 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Smart Campus Monitoring & Access Awareness</title>
-
-  <!-- LINK CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <header class="topbar">
+    <div class="title-group">
+      <h1>Smart Campus</h1>
+      <p class="subtitle">Monitoring & Access Awareness — Think First. Alert Smart.</p>
+    </div>
+    <div id="time" class="time"></div>
+  </header>
 
-  <h1>Smart Campus Monitoring & Access Awareness</h1>
-  <p class="subtitle">Think First. Alert Smart.</p>
+  <main class="container">
+    <section class="zones" aria-label="Campus zones">
+      <div class="zone" id="cafeteria">
+        <h3>Cafeteria</h3>
+        <div class="zone-controls">
+          <button class="btn toggle">Set Alert</button>
+        </div>
+      </div>
 
-  <div id="time"></div>
+      <div class="zone" id="labs">
+        <h3>Labs</h3>
+        <div class="zone-controls">
+          <button class="btn toggle">Set Alert</button>
+        </div>
+      </div>
 
-  <div class="zones">
-    <div class="zone" id="cafeteria">Cafeteria</div>
-    <div class="zone" id="labs">Labs</div>
-    <div class="zone" id="hall">Seminar Hall</div>
-    <div class="zone" id="hostel">Hostel</div>
-    <div class="zone" id="maingate">Main Gate</div>
-  </div>
+      <div class="zone" id="hall">
+        <h3>Seminar Hall</h3>
+        <div class="zone-controls">
+          <button class="btn toggle">Set Alert</button>
+        </div>
+      </div>
 
-  <h2>Global Alert Timeline</h2>
-  <div id="timeline"></div>
+      <div class="zone" id="hostel">
+        <h3>Hostel</h3>
+        <div class="zone-controls">
+          <button class="btn toggle">Set Alert</button>
+        </div>
+      </div>
 
-  <!-- LINK JAVASCRIPT -->
+      <div class="zone" id="maingate">
+        <h3>Main Gate</h3>
+        <div class="zone-controls">
+          <button class="btn toggle">Set Alert</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="randomAlert" class="btn primary">Trigger Random Alert</button>
+      <button id="clearTimeline" class="btn">Clear Timeline</button>
+    </section>
+
+    <section class="timeline-section">
+      <h2>Global Alert Timeline</h2>
+      <div id="timeline" class="timeline" aria-live="polite"></div>
+    </section>
+  </main>
+
   <script src="script.js"></script>
-
 </body>
 </html>
